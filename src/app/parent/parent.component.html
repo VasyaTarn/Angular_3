@@ -1,0 +1,16 @@
+<h3>Name</h3>
+<input type="text" [(ngModel)]="name">
+<h3>Salary</h3>
+<input type="text" [(ngModel)]="salary">
+<h3>Date</h3>
+<input type="date" [(ngModel)]="date">
+<br>
+<br>
+<button class="addBtn" (click)="addUser()">Add</button>
+<hr>
+
+<div *ngFor="let user of users; let i = index" class="users">
+    <app-child [user]="user"></app-child>
+    <button class="deleteBtn" (click)="deleteUser(i)">Delete</button>
+    <hr>
+</div>

@@ -1,0 +1,26 @@
+<div class="container">
+    @if (editStatus) 
+    {
+        <div class="edit-block">
+            <input type="text" [(ngModel)]="user.name"> <br>
+            <input type="text" [(ngModel)]="user.salary"> <br>
+            <input type="text" [(ngModel)]="user.date"> <br>
+            <button (click)="saveUser()">Save</button>
+        </div>
+    }
+    @else 
+    {
+        <div class="display-block">
+            <p>{{user.name}}</p>
+            <p>{{user.salary}}</p>
+            <p>{{user.date}}</p>
+            <button (click)="isEdit()">Edit</button>
+        </div>
+    }
+</div>
+
+
+
+
+
+
